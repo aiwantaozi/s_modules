@@ -27,8 +27,9 @@ resource "aws_network_interface" "michelia_test_resource" {
 }
 
 resource "aws_instance" "michelia_test_resource" {
-  ami           = "ami-0e0820ad173f20fbb"
-  instance_type = "t3.micro"
+  ami                  = "ami-0e0820ad173f20fbb"
+  instance_type        = "t3.micro"
+  iam_instance_profile = "AmazonSSMRoleForInstancesQuickSetup"
   network_interface {
     network_interface_id = aws_network_interface.michelia_test_resource.id
     device_index         = 0
