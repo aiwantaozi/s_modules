@@ -7,3 +7,8 @@ output "ports" {
   description = "Service Ports"
   value       = var.ports
 }
+
+output "images_from_var" {
+  description = "Service Ports"
+  value       = var.image
+}
