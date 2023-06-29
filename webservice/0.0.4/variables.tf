@@ -1,6 +1,7 @@
 # @label "Image Name"
 # @group "Basic"
 variable "image" {
+  sensitive   = true
   type        = string
   description = "Docker image name"
 }
